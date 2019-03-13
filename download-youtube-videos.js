@@ -36,8 +36,7 @@ function run (_input, _parameters) {
   }
 
   tabs.forEach((tab) => {
-    app.displayDialog(tab.url())
-    // app.doShellScript("export PATH=\"/usr/local/bin:$PATH\"; cd ~/Downloads; youtube-dl " + tab.url())
+    app.doShellScript("export PATH=\"/usr/local/bin:$PATH\"; cd ~/Downloads; youtube-dl " + tab.url())
   })
 
   return tabs
